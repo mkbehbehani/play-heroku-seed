@@ -1,0 +1,8 @@
+@(user: User)
+
+@import helper._
+@import models.User
+
+@main("@user.name") {
+  <h1>Name: "@user.name"</h1>
+}

@@ -1,0 +1,1 @@
+CREATE DATABASE play_heroku_seed;

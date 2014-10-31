@@ -13,8 +13,7 @@ import models.User
 import models.Users
 
 object Application extends Controller {
-  	def index = Action.async {
-		  val futureUsers = scala.concurrent.Future {Users.all}
-		  futureUsers.map(users => Ok(views.html.index(users)))
+  	def index = Action {
+		  Ok(views.html.index(Users.all))
 	}
 }

@@ -8,7 +8,6 @@ This application is meant to make it easier to create a Play application with ba
 ### Local development on OSX
 #### Database Setup
 - Install PostgreSQL 9.3 Postgres.app is the easiest way: [postgresapp.com](http://postgresapp.com/)
-- Set up local databases matching the settings in config/database.yml
 - [PostgreSQL full documentation](http://www.postgresql.org/docs/9.3/interactive/)
 - Run `psql`
 - Set up a development database, note the underscores:

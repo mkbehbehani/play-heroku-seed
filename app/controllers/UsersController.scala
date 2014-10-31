@@ -19,13 +19,11 @@ object UsersController extends Controller {
 	        "name" -> text,
 	        "id" -> optional(number)
 	)(User.apply)(User.unapply))
-  	def index = Action.async {
-		  val futureUsers = scala.concurrent.Future {Users.all}
-		  futureUsers.map(users => Ok(views.html.index(users)))
+  	def index = Action {
+		  Ok(views.html.index(Users.all))
 	}
-	def show(id:Int) = Action.async {
-		val futureUser = scala.concurrent.Future {Users.find(id)}
-		futureUser.map( user => Ok(views.html.users.show(user)))
+	def show(id:Int) = Action {
+		Ok(views.html.users.show(Users.find(id)))
 	}
 	def add = Action {
 	    Ok(views.html.users.add(userForm))
@@ -35,9 +33,8 @@ object UsersController extends Controller {
 		Users.create(user)
 		Redirect(routes.Application.index)
 	}
-	def edit(id:Int) = Action.async {
-		val futureUser = scala.concurrent.Future {Users.find(id)}
-		futureUser.map(user => Ok(views.html.users.edit(id, userForm.fill(user))))
+	def edit(id:Int) = Action {
+		Ok(views.html.users.edit(id, userForm.fill(Users.find(id))))
 	}
 	def update(updateid: Int) = Action {implicit request =>
 		val user = userForm.bindFromRequest.get

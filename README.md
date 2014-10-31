@@ -14,7 +14,7 @@ This application is meant to make it easier to create a Play application with ba
 - Set up a development database, note the underscores:
 `CREATE DATABASE play_heroku_seed;`
 - Confirm the database has been created by looking at the database list
-`\l'
+`\l`
 
 
 #### Run the application

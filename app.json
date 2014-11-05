@@ -1,0 +1,8 @@
+{
+  "name": "Play Framework Seed",
+  "description": "A template for getting started with the popular Play framework.",
+  "website": "http://playframework.org",
+  "success_url": "/welcome",
+  "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
+  "success_url": "/"
+}

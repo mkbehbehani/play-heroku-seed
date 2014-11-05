@@ -1,9 +1,13 @@
 # play-heroku-seed README
 You can try a deployed instance of the app here: https://afternoon-wildwood-5782.herokuapp.com/
 
-This application is meant to make it easier to create a Play application with basic Create, Read, Update and Delete functionality and get it up onto Heroku. Database manipulation is handled by Slick connected to PostgreSQL. 
+This application is meant to make it easier to create a Play application with basic Create, Read, Update and Delete functionality and get it up onto Heroku. Database manipulation is handled by Slick connected to PostgreSQL.
 
 ## Getting started
+
+You can deploy your own copy of the app on Heroku using this button:
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ### Local development on OSX
 #### Database Setup
@@ -23,7 +27,7 @@ This application is meant to make it easier to create a Play application with ba
 
 #### Development
 ##### Common database tasks
-- If you need to connect to the database to inspect it or run sql: 
+- If you need to connect to the database to inspect it or run sql:
 `\c play_heroku_seed;`
 and if you are currently logged into osx as "johnsmith" you should see
 `You are now connected to database "play_heroku_seed" as user "johnsmith".`
@@ -31,14 +35,14 @@ and if you are currently logged into osx as "johnsmith" you should see
 - View users created in the user table by securesocial:
 1. Open psql, connect to the database:
 `\c play_heroku_seed;`
-2. View user table data: 
-`SELECT * FROM "user";` 
+2. View user table data:
+`SELECT * FROM "user";`
 
 Note: "user" is also a keyword in PostgreSQL, if you enter this command without quotation marks, it will not select from the play_heroku_seed user table, but instead will output from PostgreSQL's internal database users table and you will get something like this:
 
 ```
 play_heroku_seed=# SELECT * FROM user;
- current_user 
+ current_user
 --------------
  Mashallah
 (1 row)
@@ -66,9 +70,9 @@ Slick is currently unable to generate incremental database evolution files to ma
 ### Procfile
 The app will run without a Procfile, as the necessary settings have been put in application.conf, are read by Heroku's default Procfile settings in the scala buildpack and are applied.
 
-The Procfile is included in this app for reference and best practices.Heroku reads the Procfile and attempts to initialize the app in build.sbt with the same name. 
+The Procfile is included in this app for reference and best practices.Heroku reads the Procfile and attempts to initialize the app in build.sbt with the same name.
 
-Procfile: 
+Procfile:
 ```
 web: target/universal/stage/bin/play-heroku-seed
 ```

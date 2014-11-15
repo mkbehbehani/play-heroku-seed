@@ -32,7 +32,7 @@ You can deploy your own copy of the app on Heroku using this button:
 and if you are currently logged into osx as "johnsmith" you should see
 `You are now connected to database "play_heroku_seed" as user "johnsmith".`
 
-- View users created in the user table by securesocial:
+- To view users created in the user table using psql:
 1. Open psql, connect to the database:
 `\c play_heroku_seed;`
 2. View user table data:

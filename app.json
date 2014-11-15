@@ -1,8 +1,8 @@
 {
-  "name": "Play Framework Seed",
-  "description": "A template for getting started with the popular Play framework.",
-  "website": "http://playframework.org",
-  "success_url": "/welcome",
+  "name": "play-heroku-seed",
+  "description": "Seed app for Play, Heroku and Postgres with demo CRUD model, view, controller.",
+  "repository": "https://github.com/mkbehbehani/play-heroku-seed",
   "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
-  "success_url": "/"
+  "success_url": "/",
+  "keywords": ["play", "scala", "postgresql", "slick"]
 }

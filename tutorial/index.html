@@ -71,5 +71,53 @@
 			</li>
 		</ul>
 	</div>
+	<div>
+		<h1>Common database tasks</h1>
+		<h2>Local development</h2>
+		<h3>Connect to the database in psql</h3>
+		<ul>
+			<li>
+				If you need to connect to the database to inspect it or run sql, in psql: 
+				<br>
+				<code>
+					\c play_heroku_seed;
+				</code>  
+				<br>
+				and if you are currently logged into osx as "johnsmith" you should see:
+				<br>
+				<code>
+					You are now connected to database "play_heroku_seed" as user "johnsmith".
+				</code>
+			</li>
+		</ul>
+		<h3>View users created in the user table:</h3>
+		<ol>
+			<li>
+				Open psql, connect to the database:
+				<br>
+				<code>\c play_heroku_seed;</code>
+			</li>
+			<li>
+				View user table data:
+				<br>
+				<code>SELECT * FROM "user";</code>
+			</li>
+		</ol>
+		<p>
+			Note: "user" is also a keyword in PostgreSQL, if you enter this command without quotation marks, it will not select from the play_heroku_seed user table, but instead will output from PostgreSQL's internal database users table and you will get something like this:
+			<br>
+			<code>
+				play_heroku_seed=# SELECT * FROM user;
+				<br>
+ 				current_user
+ 				<br>
+				--------------
+				<br>
+ 				Mashallah
+ 				<br>
+				(1 row)
+			</code>
+		</p>
+	</div>
 </body>
 </html>

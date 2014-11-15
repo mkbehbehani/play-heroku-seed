@@ -5,19 +5,53 @@
 <body>
 	<div>
 		<h1>The play-heroku-seed has been created!</h1>
+		<h2>Getting started</h2>
 		<p>
 			This application is meant to make it easier to create a Play application with basic Create, Read, Update and Delete functionality and get it up onto Heroku. Database manipulation is handled by Slick connected to PostgreSQL.
-			
-			
 		</p>
 		<p>
 			You can try a deployed instance of the app
 			<a href="https://afternoon-wildwood-5782.herokuapp.com/">here</a> 
-			or deploy your own instance right now: 
-			<a href="https://heroku.com/deploy?template=https://github.com/mkbehbehani/play-heroku-seed"><img src="tutorial/deploy_button.png"></a>
+			or immediately deploy your own instance on Heroku: 
+			<br>
+			<a href="https://heroku.com/deploy?template=https://github.com/mkbehbehani/play-heroku-seed" ><img src="tutorial/deploy_button.png" style="display:block; margin: 2em auto 0 auto;"></a>
 		</p>
-		<h2>Getting started</h2>
-
+	</div>
+	<div>
+		<h1>Local PostgreSQL setup</h1>
+		<h2>Local development</h2>
+		<h3>Install PostgreSQL 9.3</h3>
+		<ul>
+			<li>
+				On OSX, Postgres.app is the easiest way: <a href="http://postgresapp.com/">postgresapp.com 
+			</li>
+			<li>
+				<a href="http://www.postgresql.org/docs/9.3/interactive/">PostgreSQL full documentation</a>
+			</li>
+		</ul>
+		<h3>Set up local database</h3>
+		<p>
+			<ol>
+				<li>
+					Run: 
+					<span style="background-color: #ddd; padding: 0 0.25em;">
+					 psql 
+					</span>
+				</li>
+				<li>
+					Set up a development database, note the underscores: 
+					<span style="background-color: #ddd; padding: 0 0.25em;"> 
+					CREATE DATABASE play_heroku_seed;
+					</span>
+				</li>
+				<li>
+					Confirm the database has been created by looking at the database list: 
+					<span style="background-color: #ddd; padding: 0 0.25em;"> 
+						\l
+					</span>
+				</li>
+			</ol>
+		</p>
 	</div>
 </body>
 </html>

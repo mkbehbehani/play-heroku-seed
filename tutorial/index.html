@@ -34,24 +34,42 @@
 			<ol>
 				<li>
 					Run: 
-					<span style="background-color: #ddd; padding: 0 0.25em;">
+					<code>
 					 psql 
-					</span>
+					</code>
 				</li>
 				<li>
 					Set up a development database, note the underscores: 
-					<span style="background-color: #ddd; padding: 0 0.25em;"> 
+					<code> 
 					CREATE DATABASE play_heroku_seed;
-					</span>
+					</code>
 				</li>
 				<li>
 					Confirm the database has been created by looking at the database list: 
-					<span style="background-color: #ddd; padding: 0 0.25em;"> 
+					<code> 
 						\l
-					</span>
+					</code>
 				</li>
 			</ol>
 		</p>
+	</div>
+	<div>
+		<h1>Run the application</h1>
+		<h2>Local development</h2>
+		<ul>
+			<li>
+				In the root folder of the repo: 
+				<code>
+					 activator run
+				</code>
+			</li>
+			<li>
+				In a browser, open localhost:9000. 
+			</li>
+			<li>
+				If no folder for <a href="#code/conf/evolutions/default" class="shortcut">conf/evolutions/default</a> exists, do not worry. On first request in browser, slick will automatically inspect the models, and generate a <a href="#code/conf/evolutions/default/1.sql" class="shortcut">1.sql</a> file in <a href="#code/conf/evolutions/default" class="shortcut">conf/evolutions/default</a> This initial file is a complete schema of the application.
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
